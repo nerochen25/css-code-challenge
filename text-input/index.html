@@ -3,6 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+  <style>
+    body {
+      background-color: #7a86cb;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Barlow', sans-serif;
+    }
+  
+    input[type="text"] {
+      background: #49517B;
+      color: #E6E7F2;
+      border: 2px solid #24283D;
+      box-sizing: border-box;
+      width: 100%;
+      height: calc(3em + 2px);
+      margin: 0 0 1em;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input[type="text"] + label {
+      display: block;	
+      pointer-events: none;
+      line-height: 1.25em;
+      margin-top: calc(-3em - 2px);
+      margin-bottom: calc((3em - 1em));      
+    }
+    
+    input[type="text"] + label:before {
+      content: "Email Address";
+      display: inline-block;
+      margin: 0 calc(0.5em + 2px);
+      padding: 0 2px;
+      color: #E6E7F2;
+      transition: 0.2s ease-in-out;      
+    }
+
+    input[type="text"]:focus {
+      background: #7a86cb;
+      color: #49517B;
+      border-color:#0027FF;
+    }
+   
+    input[type="text"]:focus + label:before,
+    input[type="text"]:valid + label:before {
+      background: #7a86cb;
+      border-color:#0027FF;
+      color: #0027FF;
+      font-weight: bold;
+      transition-duration: .1s;
+      transform: translate(0, -1.6em) scale(0.9, 0.9);	
+    }
+  
+    input[type="text"]:valid {
+      border-color:#49517B;
+      background: transparent;      
+    }
+    input[type="text"]:valid + label:before {
+      color: #383E5E;      
+    }
+
+    /* when no input text */
+    input[type="text"]:invalid + label:before {
+      content: "Email Address";      
+    }
+
+    label {
+      color: transparent;
+    }
+  </style>
   <title>V+V Code Challenge - Text Input</title>
 </head>
 <body>

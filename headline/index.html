@@ -3,6 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #7a86cb;
+      color: #6849e3;
+      font-family: 'Merriweather';
+    }
+    .text-wrapper {
+      position: absolute;
+    }
+
+    .text-wrapper h1 {
+      font-size: 100px;
+    }
+
+    .text-wrapper h1:hover {
+      color: #ffffff;
+      font-size: 95px;
+    }
+
+    .text-wrapper h1:before, h1:after {
+      content: '';
+      display: block;
+      width: 0;
+      position: absolute;
+      transition: 1s ease-in-out;
+    }
+
+    .text-wrapper h1:before {
+      right: 0;
+      border-top: 4px solid #6849e3;
+    }
+
+    .text-wrapper h1:after {
+      left: 0; 
+      border-bottom: 4px solid #6849e3;
+    }
+
+    .text-wrapper h1:hover:before, 
+    .text-wrapper h1:hover:after  {
+        width: 100%;
+      }
+  </style>
   <title>V+V Code Challenge - Headline</title>
 </head>
 <body>
